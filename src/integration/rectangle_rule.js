@@ -1,11 +1,13 @@
 function rectangle_rule(f) {
   return function (a, b, n) {
-    a = a || 0;
-    b = b || 1;
-    n = n || 1000;
+    var w, sum;
 
-    var w = (b - a) / n;
-    var sum = 0;
+    a || (a = 0);
+    b || (b = 1);
+    n || (n = 1000);
+
+    w = (b - a) / n;
+    sum = 0;
 
     for (var i = 0; i < n; i++) {
       var xi = a + i * w;
